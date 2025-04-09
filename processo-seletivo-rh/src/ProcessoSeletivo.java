@@ -1,9 +1,25 @@
 public class ProcessoSeletivo {
     public static void main(String[] args) {
-        analisarCandidato(1900.0);
-        analisarCandidato(2200.0);
-        analisarCandidato(2000.0);
-        System.out.println("Processo seletivo");
+
+    }
+    static void selecaoDeCandidatos () {
+    String[] candidatos = {"FELIPE" , "MARCIA" , "JULIA" , "PAULO" , "DANIELA", "MONICA" , "GUSTAVO" , "CARLOS" , "RODRIGO" };
+    int candidatosSelecionados = 0;
+    int candidatosAtual = 0;
+    double salarioBase = 2000.0;
+    while (candidatosSelecionados < 5) {
+        String candidato = candidatos[candidatosAtual];
+        double salarioPretendido = valorPretendido();
+
+    System.out.println("O Candidato " + candidato + " Solicitou este valor de salario " + salarioPretendido );
+    candidatosAtual++;
+    if (salarioBase == valorPretendido) {
+        System.out.println("O Candidato " + candidato + " foi selecionado para a vaga");
+        candidatosAtual = 0;
+    }
+    }
+
+        analisarCandidato(salarioPretendido);
     }
     static void analisarCandidato (double salarioPretendido) {
         double salarioBase = 2000.0;
